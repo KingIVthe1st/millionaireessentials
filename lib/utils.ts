@@ -18,7 +18,7 @@ export function formatNumber(
     prefix?: string;
     suffix?: string;
     decimals?: number;
-  }
+  },
 ): string {
   const { prefix = "", suffix = "", decimals = 0 } = options || {};
   const formatted = num.toLocaleString("en-US", {
@@ -57,7 +57,38 @@ export function mapRange(
   inMin: number,
   inMax: number,
   outMin: number,
-  outMax: number
+  outMax: number,
 ): number {
   return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+}
+
+/**
+ * Get the base path for assets (images, etc.)
+ * In production (GitHub Pages), this returns "/millionaireessentials"
+ * In development, this returns ""
+ */
+const basePath =
+  process.env.NODE_ENV === "production" ? "/millionaireessentials" : "";
+
+/**
+ * Prepends the basePath to image paths for GitHub Pages compatibility
+ * Use this for all image src attributes when using next/image with unoptimized: true
+ *
+ * @example
+ * // In a component:
+ * import { getImagePath } from "@/lib/utils";
+ * <Image src={getImagePath("/images/team/photo.jpg")} alt="..." />
+ */
+export function getImagePath(path: string): string {
+  // If path already has the basePath or is external, return as-is
+  if (
+    path.startsWith(basePath) ||
+    path.startsWith("http") ||
+    path.startsWith("data:")
+  ) {
+    return path;
+  }
+  // Ensure path starts with /
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
 }

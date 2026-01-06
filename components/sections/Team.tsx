@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Linkedin } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImagePath } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,31 +15,31 @@ const team = [
   {
     name: "Taejon Jackson",
     role: "Chief Strategy Officer",
-    image: "/images/team/Taejon-1-1-1676x2048.jpg",
+    image: getImagePath("/images/team/Taejon-1-1-1676x2048.jpg"),
     bio: "Strategic vision and leadership driving capital solutions for growing businesses.",
   },
   {
     name: "Natalie Ortega",
     role: "Chief Coordinator Officer",
-    image: "/images/team/nat-2-1479x1536.jpg",
+    image: getImagePath("/images/team/nat-2-1479x1536.jpg"),
     bio: "Expert coordination ensuring seamless client experiences from start to funding.",
   },
   {
     name: "Christine Delgado",
     role: "Sales Manager",
-    image: "/images/team/christine.png",
+    image: getImagePath("/images/team/christine.png"),
     bio: "Building relationships and connecting businesses with the right capital solutions.",
   },
   {
     name: "Ericka Marie Wong",
     role: "Executive Assistant",
-    image: "/images/team/erika.png",
+    image: getImagePath("/images/team/erika.png"),
     bio: "Ensuring every client receives personalized attention and optimal outcomes.",
   },
   {
     name: "Novielyn Amorsolo",
     role: "Administrator",
-    image: "/images/team/Novielyn.png",
+    image: getImagePath("/images/team/Novielyn.png"),
     bio: "Streamlining operations to deliver faster, smoother funding experiences.",
   },
 ];

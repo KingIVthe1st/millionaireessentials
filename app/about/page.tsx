@@ -18,6 +18,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button";
 import { Footer } from "@/components/sections/Footer";
+import { getImagePath } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -81,7 +82,7 @@ const team = [
   {
     name: "Taejon Jackson",
     role: "Chief Strategy Officer",
-    image: "/images/team/Taejon-1-1-1676x2048.jpg",
+    image: getImagePath("/images/team/Taejon-1-1-1676x2048.jpg"),
     bio: "Taejon's entrepreneurial background—having built and scaled multiple businesses himself—gives him firsthand understanding of the capital challenges business owners face. As CSO, he shapes the strategic direction of Millionaire Essentials and ensures every client receives tailored guidance.",
     linkedin: "#",
     email: "taejon@millionaireessentials.com",
@@ -89,7 +90,7 @@ const team = [
   {
     name: "Natalie Ortega",
     role: "Chief Coordinator Officer",
-    image: "/images/team/nat-2-1479x1536.jpg",
+    image: getImagePath("/images/team/nat-2-1479x1536.jpg"),
     bio: "Natalie specializes in orchestrating complex funding deals and ensuring seamless coordination between clients and lending partners. Her analytical approach ensures clients understand every aspect of their funding options before making decisions.",
     linkedin: "#",
     email: "natalie@millionaireessentials.com",
@@ -97,7 +98,7 @@ const team = [
   {
     name: "Christine Delgado",
     role: "Sales Manager",
-    image: "/images/team/christine.png",
+    image: getImagePath("/images/team/christine.png"),
     bio: "Christine brings extensive experience in business development and client acquisition. She leads our sales team with a consultative approach, ensuring every business owner feels heard and understood before any funding discussion begins.",
     linkedin: "#",
     email: "christine@millionaireessentials.com",
@@ -105,7 +106,7 @@ const team = [
   {
     name: "Ericka Marie Wong",
     role: "Executive Assistant",
-    image: "/images/team/erika.png",
+    image: getImagePath("/images/team/erika.png"),
     bio: "Ericka's background in executive support and client relations ensures our leadership team operates at peak efficiency. She coordinates high-priority communications and keeps the entire operation running smoothly.",
     linkedin: "#",
     email: "ericka@millionaireessentials.com",
@@ -113,7 +114,7 @@ const team = [
   {
     name: "Novielyn Amorsolo",
     role: "Administrator",
-    image: "/images/team/Novielyn.png",
+    image: getImagePath("/images/team/Novielyn.png"),
     bio: "Novielyn orchestrates the behind-the-scenes operations that make our funding process seamless. Her attention to detail and organizational excellence ensures nothing falls through the cracks.",
     linkedin: "#",
     email: "novielyn@millionaireessentials.com",
@@ -254,7 +255,9 @@ export default function AboutPage() {
               <div className="absolute inset-4 rounded-2xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20" />
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/brand/milliessentialsqualityervice.jpg"
+                  src={getImagePath(
+                    "/images/brand/milliessentialsqualityervice.jpg",
+                  )}
                   alt="Quality service at Millionaire Essentials"
                   fill
                   className="object-cover"

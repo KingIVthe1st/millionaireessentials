@@ -15,6 +15,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Footer } from "@/components/sections/Footer";
+import { getImagePath } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -42,7 +43,7 @@ const content: ContentItem[] = [
     title: "The Power of Strategic Capital",
     description:
       "How understanding your capital options can transform your business trajectory and open doors you didn't know existed.",
-    image: "/images/podcast/davidpowertalkpodcast.jpg",
+    image: getImagePath("/images/podcast/davidpowertalkpodcast.jpg"),
     date: "Dec 2024",
     duration: "45 min",
     guest: "David Powers",
@@ -55,7 +56,7 @@ const content: ContentItem[] = [
     title: "SBA Loans in 2025: What Business Owners Need to Know",
     description:
       "A comprehensive guide to the latest SBA loan programs, requirements, and how to position your business for approval.",
-    image: "/images/brand/milliessentialsqualityervice.jpg",
+    image: getImagePath("/images/brand/milliessentialsqualityervice.jpg"),
     date: "Dec 2024",
     readTime: "8 min read",
     category: "SBA Loans",
@@ -67,8 +68,9 @@ const content: ContentItem[] = [
     title: "From Startup to Scale: A Funding Journey",
     description:
       "Lindsey shares her experience going from bootstrapped startup to multi-million dollar acquisition through smart financing.",
-    image:
+    image: getImagePath(
       "/images/podcast/lindseysmith-millionaireessentials-latestpodcasts.jpg",
+    ),
     date: "Nov 2024",
     duration: "38 min",
     guest: "Lindsey Smith",
@@ -80,7 +82,7 @@ const content: ContentItem[] = [
     title: "Term Loans vs Lines of Credit: Which Is Right for You?",
     description:
       "Understanding the key differences between these financing options and when each makes the most sense for your business.",
-    image: "/images/hero/hero-bg.png",
+    image: getImagePath("/images/hero/hero-bg.png"),
     date: "Nov 2024",
     readTime: "6 min read",
     category: "Education",
@@ -91,7 +93,9 @@ const content: ContentItem[] = [
     title: "Building Wealth Through Business Ownership",
     description:
       "Storm discusses how proper capital structure can accelerate wealth building for business owners.",
-    image: "/images/podcast/stormleroy-millionaireessentials-podcast.jpg",
+    image: getImagePath(
+      "/images/podcast/stormleroy-millionaireessentials-podcast.jpg",
+    ),
     date: "Oct 2024",
     duration: "52 min",
     guest: "Storm Leroy",
@@ -103,7 +107,7 @@ const content: ContentItem[] = [
     title: "5 Signs Your Business Is Ready for Expansion Funding",
     description:
       "Key indicators that suggest it's time to seek capital for growth—and how to prepare your business for the application process.",
-    image: "/images/brand/milliessentialsheader.png",
+    image: getImagePath("/images/brand/milliessentialsheader.png"),
     date: "Oct 2024",
     readTime: "5 min read",
     category: "Growth",

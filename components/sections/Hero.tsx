@@ -7,6 +7,7 @@ import { ArrowRight, Play } from "lucide-react";
 import gsap from "gsap";
 import { Button } from "@/components/ui/Button";
 import { MagneticWrapper } from "@/components/effects/CustomCursor";
+import { getImagePath } from "@/lib/utils";
 
 export function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -168,7 +169,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero/hero-bg.png"
+          src={getImagePath("/images/hero/hero-bg.png")}
           alt=""
           fill
           priority

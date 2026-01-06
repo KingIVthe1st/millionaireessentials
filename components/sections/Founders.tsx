@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImagePath } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -115,7 +116,9 @@ export function Founders() {
             className="relative aspect-[16/10] md:aspect-[21/9] rounded-2xl overflow-hidden mb-12 group"
           >
             <Image
-              src="/images/brand/milliessentialsqualityervice.jpg"
+              src={getImagePath(
+                "/images/brand/milliessentialsqualityervice.jpg",
+              )}
               alt="Brandon Jackson and Tevin Facey - Co-Founders of Millionaire Essentials"
               fill
               className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"

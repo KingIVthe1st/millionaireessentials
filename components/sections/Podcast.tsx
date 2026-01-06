@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Play, Clock, ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImagePath } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +18,7 @@ const episodes = [
     guest: "David Powers",
     description:
       "How understanding your capital options can transform your business trajectory and open doors you didn't know existed.",
-    image: "/images/podcast/davidpowertalkpodcast.jpg",
+    image: getImagePath("/images/podcast/davidpowertalkpodcast.jpg"),
     duration: "45 min",
     date: "Dec 2024",
     href: "/insights/podcast/strategic-capital",
@@ -27,8 +28,9 @@ const episodes = [
     guest: "Lindsey Smith",
     description:
       "Lindsey shares her experience going from bootstrapped startup to multi-million dollar acquisition through smart financing.",
-    image:
+    image: getImagePath(
       "/images/podcast/lindseysmith-millionaireessentials-latestpodcasts.jpg",
+    ),
     duration: "38 min",
     date: "Nov 2024",
     href: "/insights/podcast/startup-to-scale",
@@ -38,7 +40,9 @@ const episodes = [
     guest: "Storm Leroy",
     description:
       "Storm discusses how proper capital structure can accelerate wealth building for business owners.",
-    image: "/images/podcast/stormleroy-millionaireessentials-podcast.jpg",
+    image: getImagePath(
+      "/images/podcast/stormleroy-millionaireessentials-podcast.jpg",
+    ),
     duration: "52 min",
     date: "Oct 2024",
     href: "/insights/podcast/building-wealth",

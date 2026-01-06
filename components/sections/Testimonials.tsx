@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImagePath } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +17,7 @@ const testimonials = [
       "Millionaire Essentials didn't just find us funding — they found us the right funding. The terms were better than anything we'd been offered elsewhere, and Christine's team made the entire process feel effortless.",
     author: "Marcus Thompson",
     title: "CEO, Thompson Construction Group",
-    image: "/images/testimonials/marcus.jpg",
+    image: getImagePath("/images/testimonials/marcus.jpg"),
     rating: 5,
     funding: "$350K Term Loan",
   },
@@ -25,7 +26,7 @@ const testimonials = [
       "After being turned down by three banks, I was skeptical. Within two weeks, Millionaire Essentials connected me with an SBA lender who understood my business. We closed in 30 days.",
     author: "Sarah Chen",
     title: "Founder, Meridian Consulting",
-    image: "/images/testimonials/sarah.jpg",
+    image: getImagePath("/images/testimonials/sarah.jpg"),
     rating: 5,
     funding: "$500K SBA 7(a)",
   },
@@ -34,7 +35,7 @@ const testimonials = [
       "The difference is in the details. They didn't push the first option — they presented three paths, explained the trade-offs, and let me choose what was right for my situation. That's rare in this industry.",
     author: "David Rodriguez",
     title: "Owner, Rodriguez Auto Group",
-    image: "/images/testimonials/david.jpg",
+    image: getImagePath("/images/testimonials/david.jpg"),
     rating: 5,
     funding: "$200K Line of Credit",
   },
@@ -43,7 +44,7 @@ const testimonials = [
       "We needed capital fast for a real estate opportunity. Millionaire Essentials delivered in 10 days with terms I could actually live with. They've become our go-to for every funding need since.",
     author: "Jennifer Walsh",
     title: "Managing Partner, Walsh Investments",
-    image: "/images/testimonials/jennifer.jpg",
+    image: getImagePath("/images/testimonials/jennifer.jpg"),
     rating: 5,
     funding: "$750K Bridge Financing",
   },
